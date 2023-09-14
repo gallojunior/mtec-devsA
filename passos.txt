@@ -16,6 +16,12 @@ dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6
 
 /* Salvar tudo no GitHub */
 Estar na pasta do repositório
+git add .
+git commit -m "Criado a solução e o projeto"
+git push
 
 
-
+/* Dados */
+Usuários  - Devs/Admin/Prof
+    Dados básicos: Nome, Data nascimento, Foto, TipoDev
+TipoDev - Front/Back/Full/UX-UI/Design/
