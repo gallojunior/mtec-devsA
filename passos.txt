@@ -1,7 +1,10 @@
 /* Configuração do Git */
 git config --global user.name GalloJunior
 git config --global user.email gallojunior@gmail.com
-git clone
+git clone https://github.com/gallojunior/mtec-devsA.git
+
+cd MtecDevs
+dotnet restore
 
 /* Criar a solução e o projeto */
 dotnet new sln --name MtecDevs
@@ -25,3 +28,5 @@ git push
 Usuários  - Devs/Admin/Prof
     Dados básicos: Nome, Data nascimento, Foto, TipoDev
 TipoDev - Front/Back/Full/UX-UI/Design/
+
+
