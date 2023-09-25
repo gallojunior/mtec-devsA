@@ -29,4 +29,21 @@ Usuários  - Devs/Admin/Prof
     Dados básicos: Nome, Data nascimento, Foto, TipoDev
 TipoDev - Front/Back/Full/UX-UI/Design/
 
+/* Criação da classe de Contexto na pasta Data */
+AppDbContext
 
+/* Criar a string de conexão */
+appsettings.json
+
+Adicionou os serviços de DbContext e Identity ao program
+
+Criar a migração
+// Testar se tem a ferramenta de migração
+dotnet ef
+
+// Instala no PC
+dotnet tool install --global dotnet-ef
+
+// Comandos para criar e aplicar as migrações
+dotnet ef migrations add criar-banco
+dotnet ef database update
