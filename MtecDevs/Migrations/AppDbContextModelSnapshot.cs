@@ -43,6 +43,29 @@ namespace MtecDevs.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "92d4272f-428f-4ccc-8f63-28a6f87294b4",
+                            ConcurrencyStamp = "667a715c-dbee-4a4d-aa9b-9c3e5628d69a",
+                            Name = "Administrador",
+                            NormalizedName = "ADMINISTRADOR"
+                        },
+                        new
+                        {
+                            Id = "02759feb-28c1-4194-8a1a-2433300a6aeb",
+                            ConcurrencyStamp = "ab039053-b2f5-4769-b53a-435c9ebd5e8a",
+                            Name = "Moderador",
+                            NormalizedName = "MODERADOR"
+                        },
+                        new
+                        {
+                            Id = "cda070bb-f626-4e79-84c9-25c4cd13ff56",
+                            ConcurrencyStamp = "bbd97ff9-936f-4743-ab8f-cce67b0fa791",
+                            Name = "Usuário",
+                            NormalizedName = "USUÁRIO"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -130,6 +153,24 @@ namespace MtecDevs.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "429579c2-979f-4d48-9de5-65f7f8db300d",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "6b5b1b1e-27a1-431b-a6ed-8067570d287a",
+                            Email = "gallojunior@gmail.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = true,
+                            NormalizedEmail = "GALLOJUNIOR@GMAIL.COM",
+                            NormalizedUserName = "GALLOJUNIOR",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPzKVZDniUQ8pVNZI1/l/45M3QghlrnIK5hGJUHngqETpZafe2c1tLGlcBEyoBnANg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "6e025b58-197c-4ba8-83fc-47bfa1979304",
+                            TwoFactorEnabled = false,
+                            UserName = "GalloJunior"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -190,6 +231,13 @@ namespace MtecDevs.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "429579c2-979f-4d48-9de5-65f7f8db300d",
+                            RoleId = "92d4272f-428f-4ccc-8f63-28a6f87294b4"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -224,6 +272,33 @@ namespace MtecDevs.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoDev");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = (byte)1,
+                            Nome = "FullStack"
+                        },
+                        new
+                        {
+                            Id = (byte)2,
+                            Nome = "FrontEnd"
+                        },
+                        new
+                        {
+                            Id = (byte)3,
+                            Nome = "BackEnd"
+                        },
+                        new
+                        {
+                            Id = (byte)4,
+                            Nome = "Design"
+                        },
+                        new
+                        {
+                            Id = (byte)5,
+                            Nome = "Jogos"
+                        });
                 });
 
             modelBuilder.Entity("MtecDevs.Models.Usuario", b =>
@@ -251,6 +326,16 @@ namespace MtecDevs.Migrations
                     b.HasIndex("TipoDevId");
 
                     b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "429579c2-979f-4d48-9de5-65f7f8db300d",
+                            DataNascimento = new DateTime(1981, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Foto = "/img/usuarios/avatar.png",
+                            Nome = "José Antonio Gallo Junior",
+                            TipoDevId = (byte)1
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
